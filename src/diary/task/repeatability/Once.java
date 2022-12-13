@@ -10,7 +10,6 @@ public class Once extends Task{
         super(title, description, typesOfTask);
         setTime(time);
     }
-    @Override
     public void setTime(LocalDateTime time){
         if (time.isBefore(LocalDateTime.now())) throw new RuntimeException(exception);else this.time = time;
     }
